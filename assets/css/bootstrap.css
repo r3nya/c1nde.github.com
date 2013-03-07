@@ -5998,7 +5998,6 @@ div.subnav .nav > li.active > a:hover {
 }
 
 .btn {
-  padding-top: .6em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
@@ -6102,4 +6101,10 @@ i[class^="icon-"] {
 
 .affix {
   position: fixed;
+}
+:-moz-placeholder,
+::-moz-placeholder,
+::-webkit-input-placeholder {
+  padding-top: 1px;
+  font-size: 18px;
 }
