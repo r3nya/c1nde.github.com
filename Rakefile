@@ -13,7 +13,7 @@ task :new_post do
     File.open(path, 'w') do |file|
       file.puts '---'
       file.puts 'layout: default'
-      file.puts 'title: ' + title
+      file.puts 'title: ' + title.capitalize
       file.puts '---'
     end
   end
