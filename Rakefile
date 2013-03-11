@@ -15,6 +15,10 @@ task :new_post do
       file.puts 'layout: default'
       file.puts 'title: ' + title.capitalize
       file.puts '---'
+      file.puts "\n\n"
+      file.puts '{{ page.date | date: "%d %B %Y" }}'
+      file.puts "\n"
+      file.puts "[link to this post]({% post_url #{Date.today}-#{title.downcase.gsub(/[^[:alnum:]]+/, '-')} %})"
     end
   end
 end
