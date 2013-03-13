@@ -30,6 +30,21 @@
         </div>
         <div class="span6 well">
           {{content}}
+
+          {% if page.url != "/index.html" %}
+            <ul class="pager">
+              {% if page.previous %} 
+                <li class="previous">
+                  <a href="{{ page.previous.url }}">&larr; Older</a>
+                </li>
+              {% endif %}
+              {% if page.next %} 
+                <li class="next">
+                  <a href="{{ page.next.url }}">Newer &rarr;</a>
+                </li>
+              {% endif %}
+            </ul>
+          {% endif %}
         </div>
         <div class="span4 well text-center">
           <img src="/assets/img/shebang.png" alt="My photo" class="img-rounded" />
