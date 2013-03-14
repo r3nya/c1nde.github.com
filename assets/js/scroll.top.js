@@ -1,8 +1,5 @@
 $(document).ready(function(){
-  // hide .backToTop first
   $(".backToTop").hide();
-
-  // fade in .gototop
   $(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 110) {
@@ -20,5 +17,4 @@ $(document).ready(function(){
       return false;
     });
   });
-
 });
