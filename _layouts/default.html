@@ -28,9 +28,13 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="page-header">
-          <h1>{% if page.title %} {{ page.title }} | {% endif %}C1nde blog</h1>
+        <div class="span12">
+          <div class="page-header">
+            <h1>{% if page.title %} {{ page.title }} | {% endif %}C1nde blog</h1>
+          </div>
         </div>
+      </div>
+      <div class="row">
         <div class="span6 well">
           {{content}}
 
@@ -47,12 +51,12 @@
             <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
             <ul class="pager">
-              {% if page.previous %} 
+              {% if page.previous %}
                 <li class="previous">
                   <a href="{{ page.previous.url }}">&larr; Older</a>
                 </li>
               {% endif %}
-              {% if page.next %} 
+              {% if page.next %}
                 <li class="next">
                   <a href="{{ page.next.url }}">Newer &rarr;</a>
                 </li>
@@ -81,6 +85,7 @@
           </div>
         </div>
       </div>
+    </div>
       <div class="backToTop text-center">&#8593; top</div>
     </div> <!-- /container -->
   </body>
