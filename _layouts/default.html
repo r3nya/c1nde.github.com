@@ -5,7 +5,6 @@
     <title>{% if page.title %} {{ page.title }} | {% endif %}C1nde blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-responsive.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="/assets/js/scroll.top.js"></script>
@@ -24,49 +23,41 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="span12">
-          <div class="page-header">
-            <h1>{% if page.title %} {{ page.title }} | {% endif %}C1nde blog</h1>
-          </div>
+        <div class="col-md-12 col-sm-12">
+          <h1 class='headline'>{% if page.title %} {{ page.title }} | {% endif %}C1nde blog</h1>
         </div>
       </div>
       <div class="row">
-        <div class="span6 well">
-          {{content}}
-
-          {% if page.url != "/index.html" %}
-            <ul class="pager">
-              {% if page.previous %}
-                <li class="previous">
-                  <a href="{{ page.previous.url }}">&larr; Older</a>
-                </li>
-              {% endif %}
-              {% if page.next %}
-                <li class="next">
-                  <a href="{{ page.next.url }}">Newer &rarr;</a>
-                </li>
-              {% endif %}
-            </ul>
-          {% endif %}
+        <div class="col-md-8 col-sm-8">
+          <div class="well">
+            {{content}}
+            {% if page.url != "/index.html" %}
+              <ul class="pager">
+                {% if page.previous %}
+                  <li class="previous">
+                    <a href="{{ page.previous.url }}">&larr; Older</a>
+                  </li>
+                {% endif %}
+                {% if page.next %}
+                  <li class="next">
+                    <a href="{{ page.next.url }}">Newer &rarr;</a>
+                  </li>
+                {% endif %}
+              </ul>
+            {% endif %}
+          </div>
         </div>
-        <div class="span4 text-center">
+        <div class="col-md-4 col-sm-4 text-center">
           <div class="well">
             <img src="/assets/img/shebang.png" alt="My photo" class="img-rounded" />
             <h2>About me</h2>
-            <p>
-              Working at <a href="http://intspirit.com/" target="_blank"><strong>IntSpirit</strong></a>
-            </p>
-            <p>
-              All the stuff developer and *nix admin
-            </p>
-            <p>
-              Blog powered by <a href="https://github.com/mojombo/jekyll" target="_blank">Jekyll</a>
-            </p>
+            <p>Working at <a href="http://intspirit.com/" target="_blank"><strong>IntSpirit</strong></a></p>
+            <p>All the stuff developer and *nix admin</p>
+            <p>Blog powered by <a href="https://github.com/mojombo/jekyll" target="_blank">Jekyll</a></p>
           </div>
           <div class="well">
             <h2>Github stats</h2>
-            <div class="git-status">
-            </div>
+            <div class="git-status"></div>
           </div>
         </div>
       </div>

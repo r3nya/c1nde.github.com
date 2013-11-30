@@ -1,13 +1,20 @@
 .backToTop {
     width: 55px;
-    height: 20px;
+    height: 40px;
     position: fixed;
     padding: 10px 0;
     right: 20px;
     bottom: 20px;
     cursor: pointer;
     background: #fff;
-    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2),-1px -1px 0 rgba(0,0,0,0.1);
-    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2),-1px -1px 0 rgba(0,0,0,0.1);
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.2),-1px -1px 0 rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+.headline {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.post img {
+    max-width: 100%;
 }
